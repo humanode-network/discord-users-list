@@ -1,4 +1,5 @@
-//! List discord users.
+//! List discord server members and write the output to a file
+//! in the `JSONLines` format.
 
 use futures_util::StreamExt;
 use tokio::io::AsyncWriteExt;
@@ -31,7 +32,7 @@ async fn main() -> Result<(), color_eyre::eyre::Error> {
         .open(output)
         .await?;
 
-    let mut stream = discord_users_list::list_users(client, discord_server_id).boxed();
+    let mut stream = list_members::list_members(client, discord_server_id).boxed();
     while let Some(result) = stream.next().await {
         let members = result?;
         for member in members {

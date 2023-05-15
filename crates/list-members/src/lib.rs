@@ -1,4 +1,4 @@
-//! Implemntation of the discord users listing logic.
+//! Implementation of the discord server members listing logic.
 
 use twilight_model::id::{marker::GuildMarker, Id};
 
@@ -13,8 +13,8 @@ pub enum Error {
     Response(twilight_http::response::DeserializeBodyError),
 }
 
-/// List the discord users.
-pub fn list_users(
+/// List the members of a given discord guild (aka server).
+pub fn list_members(
     client: twilight_http::Client,
     guild_id: Id<GuildMarker>,
 ) -> impl futures_core::Stream<Item = Result<Vec<twilight_model::guild::Member>, Error>> {

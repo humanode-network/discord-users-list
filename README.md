@@ -18,7 +18,7 @@ Useful for integration with [BotBasher](https://botbasher.humanode.io).
 
    ```shell
    cat <<'EOF' > .env
-   export RUST_LOG="info,discord_users_list=debug"
+   export RUST_LOG="info,list_members=debug"
    export DISCORD_TOKEN="<token>"
    export DISCORD_SERVER_ID="<server id>"
    export OUTPUT="users.jsonlines"

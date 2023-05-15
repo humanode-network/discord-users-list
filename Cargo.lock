@@ -133,6 +133,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "cli"
+version = "0.1.0"
+dependencies = [
+ "color-eyre",
+ "envfury",
+ "futures-util",
+ "list-members",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tracing-subscriber",
+ "twilight-http",
+]
+
+[[package]]
 name = "color-eyre"
 version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -174,25 +189,6 @@ name = "core-foundation-sys"
 version = "0.8.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e496a50fda8aacccc86d7529e2c1e0892dbd0f898a6b5645b5561b89c3210efa"
-
-[[package]]
-name = "discord-users-list"
-version = "0.1.0"
-dependencies = [
- "async-stream",
- "color-eyre",
- "envfury",
- "futures-core",
- "futures-util",
- "serde",
- "serde_json",
- "thiserror",
- "tokio",
- "tracing",
- "tracing-subscriber",
- "twilight-http",
- "twilight-model",
-]
 
 [[package]]
 name = "envfury"
@@ -436,6 +432,18 @@ name = "libc"
 version = "0.2.144"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2b00cc1c228a6782d0f076e7b232802e0c5689d41bb5df366f2a6b6621cfdfe1"
+
+[[package]]
+name = "list-members"
+version = "0.1.0"
+dependencies = [
+ "async-stream",
+ "futures-core",
+ "thiserror",
+ "tracing",
+ "twilight-http",
+ "twilight-model",
+]
 
 [[package]]
 name = "lock_api"

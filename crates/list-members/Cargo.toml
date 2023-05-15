@@ -1,0 +1,12 @@
+[package]
+name = "list-members"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-stream = "0.3"
+futures-core = "0.3"
+thiserror = "1"
+tracing = "0.1"
+twilight-http = "0.15"
+twilight-model = "0.15"

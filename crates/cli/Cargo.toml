@@ -1,19 +1,16 @@
 [package]
-name = "discord-users-list"
+name = "cli"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-async-stream = "0.3"
+list-members = { path = "../list-members" }
+
 color-eyre = "0.6"
 envfury = "0.1"
-futures-core = "0.3"
 futures-util = "0.3"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-thiserror = "1"
 tokio = { version = "1", features = ["full"] }
-tracing = "0.1"
 tracing-subscriber = "0.3"
 twilight-http = "0.15"
-twilight-model = "0.15"
