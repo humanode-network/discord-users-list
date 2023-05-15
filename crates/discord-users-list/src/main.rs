@@ -3,10 +3,14 @@
 use futures_util::StreamExt;
 use tokio::io::AsyncWriteExt;
 
+/// An item in the output.
 #[derive(Debug, serde::Serialize)]
 struct OutputItem {
+    /// The Discord ID of the user.
     user_id: String,
+    /// The Discord username of the user.
     user_name: String,
+    /// The list of all the role IDs assigned to the user.
     user_roles: Vec<String>,
 }
 
