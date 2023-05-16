@@ -34,7 +34,7 @@ Useful for integration with [BotBasher](https://botbasher.humanode.io).
 4. Run the app.
 
    ```shell
-   cargo run
+   cargo run --bin list-members
    ```
 
 5. Inspect the users list and the execution log.
