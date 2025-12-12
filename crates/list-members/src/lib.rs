@@ -1,6 +1,6 @@
 //! Implementation of the discord server members listing logic.
 
-use twilight_model::id::{marker::GuildMarker, Id};
+use twilight_model::id::{Id, marker::GuildMarker};
 
 /// An error that can occur while listing users.
 #[derive(Debug, thiserror::Error)]
@@ -22,7 +22,7 @@ pub fn list_members(
         let mut after = None;
 
         loop {
-            let mut request = client.guild_members(guild_id).limit(1000).unwrap();
+            let mut request = client.guild_members(guild_id).limit(1000);
             if let Some(after) = after.take() {
                 request = request.after(after);
             }
