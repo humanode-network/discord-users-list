@@ -8,13 +8,14 @@ ignored = ["rustls"]
 
 [dependencies]
 list-members = { path = "../list-members" }
+
 envfury = "0.2"
 futures-util = "0.3"
 iced = { version = "0.14", features = ["tokio"] }
 rustls = { version = "0.23", features = ["aws-lc-rs"] }
-thiserror = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+thiserror = "2"
 tokio = { version = "1", features = ["full"] }
 tracing-subscriber = "0.3"
 twilight-http = "0.17"
