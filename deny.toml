@@ -1,0 +1,37 @@
+[licenses]
+allow = [
+  "0BSD",
+  "Apache-2.0 WITH LLVM-exception",
+  "Apache-2.0",
+  "BSD-3-Clause",
+  "BSD-2-Clause",
+  "ISC",
+  "MIT",
+  "Unlicense",
+  "Unicode-3.0",
+  "OpenSSL",
+  "BSL-1.0",
+  "CC0-1.0",
+  "Zlib",
+]
+
+[[licenses.exceptions]]
+name = "foldhash"
+allow = ["Zlib"]
+
+[[licenses.clarify]]
+name = "ring"
+version = "*"
+expression = "MIT AND ISC AND OpenSSL"
+license-files = [{ path = "LICENSE", hash = 0xbd0eed23 }]
+
+[licenses.private]
+ignore = true
+
+[bans]
+multiple-versions = "allow"
+
+[[advisories.ignore]]
+id = "RUSTSEC-2024-0436"
+reason = "well... just ignore this... some people don't ever think about their actions..."
+# "unmiaintinained" but I'd personally use `paste`...
