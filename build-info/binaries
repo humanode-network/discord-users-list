@@ -3,7 +3,7 @@ set -euo pipefail
 
 list_binaries() {
   cargo metadata --format-version 1 |
-    jq -r '
+    jq -rb '
       .workspace_members as $ws |
       .packages[] | select(.id as $id | $ws | contains([$id])) |
       .targets[] | select(.kind == ["bin"]) |
